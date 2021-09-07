@@ -1,39 +1,73 @@
 name: Build, push, and deploy
 on: push
 env:
+  IMAGE_TAG: ${{ github.sha }}
+  IMAGE: ghcr.io/navikt/tpts-inngang-flate
+  PRINT_PAYLOAD: true
+  RESOURCE: .nais/nais.yaml
   CI: true
   TZ: Europe/Amsterdam
-  image: ghcr.io/navikt/tpts-inngang-flate:${{ github.sha }}
+  NODE_VERSION: '14.x'
 
 jobs:
-  build:
-    name: Build and push
+  test:
+    name: Run tests
     runs-on: ubuntu-latest
+    if: github.ref != 'refs/heads/dev' && github.ref != 'refs/heads/master'
     steps:
       - name: Checkout
         uses: actions/checkout@v1
       - name: Setup node
         uses: actions/setup-node@v1
         with:
-          node-version: '14.x'
+          node-version: ${{env.NODE_VERSION}}
       - name: Install dependencies
         run: npm ci
       - name: Run tests
         run: npm run test
-      - name: build application
+  build:
+    name: Build Project
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{env.NODE_VERSION}}
+      - run: npm ci
+      - run: npm run build
+
+  build-docker-image:
+    runs-on: ubuntu-latest
+    name: Build and publish Docker image
+    needs: [ build, test ]
+    if: github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/master'
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{env.NODE_VERSION}}
+      - name: Build production artifact
         run: npm run build
+      - name: Build and publish Docker image
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo ${GITHUB_TOKEN} | docker login docker.pkg.github.com -u ${GITHUB_REPOSITORY} --password-stdin
+          echo ${GITHUB_TOKEN} | docker login ghcr.io -u ${{github.actor}} --password-stdin
+          docker build -t ${IMAGE}:${IMAGE_TAG} .
+          docker push ${IMAGE}:${IMAGE_TAG}
 
   deploy:
-      name: Deploy
-      needs: build
-      if: github.ref == 'refs/heads/master'
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v1
-        - uses: nais/deploy/actions/deploy@v1
-          env:
-            APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-            CLUSTER: dev-gcp
-            RESOURCE: .nais/nais.yml
-            VAR: image=${{ env.image }}
+    name: Deploy application
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - uses: nais/deploy/actions/deploy@v1
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: dev-gcp
+          VARS: .nais/dev-gcp.yaml
+          VAR: image_tag=${{env.IMAGE_TAG}}
 
