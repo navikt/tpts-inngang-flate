@@ -41,7 +41,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "build:mock": "cross-env PUBLIC_URL=/amt-tiltaksarrangor-flate craco build",
+    "build:mock": "cross-env PUBLIC_URL=/tpts-inngang-flate craco build",
     "test": "craco test"
   },
   "eslintConfig": {
