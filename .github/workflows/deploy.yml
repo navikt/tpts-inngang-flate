@@ -3,12 +3,10 @@ on: push
 env:
   IMAGE_TAG: ${{ github.sha }}
   IMAGE: ghcr.io/navikt/tpts-inngang-flate
-  PRINT_PAYLOAD: true
   RESOURCE: .nais/nais.yaml
   CI: true
   TZ: Europe/Amsterdam
   NODE_VERSION: '14.x'
-
 jobs:
   test:
     name: Run tests
