@@ -31,20 +31,8 @@ spec:
     buckets:
       - name: tpts-inngang-flate-dev
         cascadingDelete: false
-  accessPolicy:
-    outbound:
-      rules:
-        - application: tpts-inngang-flate-auth-proxy
   env:
     - name: GCS_BUCKET_NAME
       value: tpts-inngang-flate-dev
     - name: CORS_DOMAIN
       value: "*"
-    - name: JSON_CONFIG
-      value: >
-        {
-          "proxies": [
-            { "from": "/auth-proxy", "to": "http://tpts-inngang-flate-auth-proxy" },
-            { "from": "/tpts-inngang", "to": "http://tpts-inngang-flate-auth-proxy/proxy/tpts-inngang" }
-          ]
-        }
