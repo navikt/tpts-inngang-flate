@@ -40,7 +40,7 @@ const testOppgaver: Oppgave[] = [{
         vedtaksperiodeId: '876f8c45-e9d1-4fd0-9c8c-9ee10f66b171',
 
         personinfo: {
-            fornavn: 'Alma',
+            fornavn: 'Alma A',
             mellomnavn: null,
             etternavn: 'Svensson',
             fødselsdato: null,
