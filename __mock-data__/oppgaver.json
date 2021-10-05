@@ -1,0 +1,391 @@
+[
+  {
+    "oppgavereferanse": "1",
+    "opprettet": "2021-09-27T08:38:00.728127",
+    "fødselsnummer": "21023701901",
+    "aktørId": "1000000009871",
+    "personinfo": {
+      "fornavn": "Anton",
+      "mellomnavn": null,
+      "etternavn": "Svensson",
+      "fødselsdato": null,
+      "kjønn": null
+    },
+    "vedtaksperiodeId": "aaaaaaaa-6541-4dcf-aa53-8b466fc4ac87",
+    "type": "FØRSTEGANGSBEHANDLING",
+    "antallVarsler": 2,
+    "boenhet": {
+      "id": "0220",
+      "navn": "Asker"
+    },
+    "tiltak": {
+      "id": "Ttype1",
+      "navn": "Avklaring"
+    }
+
+  },
+  {
+    "oppgavereferanse": "234",
+    "opprettet": "2021-03-10T08:38:00.728127",
+    "fødselsnummer": "04073732100",
+    "aktørId": "87654321962123",
+    "personinfo": {
+      "fornavn": "Alma",
+      "mellomnavn": null,
+      "etternavn": "Svensson",
+      "fødselsdato": null,
+      "kjønn": null
+    },
+    "vedtaksperiodeId": "876f8c45-e9d1-4fd0-9c8c-9ee10f66b171",
+    "type": "FORLENGELSE",
+    "antallVarsler": 0,
+    "boenhet": {
+      "id": "0220",
+      "navn": "Asker"
+    },
+    "tiltak": {
+      "id": "Ttype2",
+      "navn": "Mentor"
+    },
+    "tildeling": {
+      "saksbehandler.oid": "uuid",
+      "saksbehandler.epost": "kmh@nav.no",
+      "saksbehandler.navn": "Klara Helgemo",
+      "påVent": "false"
+    }
+  },
+  {
+    "oppgavereferanse": "112",
+    "opprettet": "2021-10-01T23:04:09.454",
+    "fødselsnummer": "19047622436",
+    "aktørId": "2836012894592",
+    "personinfo": {
+      "fornavn": "SNIFF",
+      "mellomnavn": null,
+      "etternavn": "SNILLE",
+      "fødselsdato": "1932-02-12",
+      "kjønn": null
+    },
+    "vedtaksperiodeId": "fde0f314-a2d0-486b-9419-f508ab26c7bc",
+    "type": "FØRSTEGANGSBEHANDLING",
+    "antallVarsler": 0,
+    "boenhet": {
+      "id": "0228",
+      "navn": "Nav Utland"
+    },
+    "tiltak": {
+      "id": "Ttype3",
+      "navn": "Oppfølging"
+    },
+    "inntektskilde": "Oppfølging"
+  },
+  {
+    "oppgavereferanse": "2274",
+    "opprettet": "2021-06-01T23:04:09.454",
+    "fødselsnummer": "09038400182",
+    "aktørId": "2259231338047",
+    "personinfo": {
+      "fornavn": "KNERTEN",
+      "mellomnavn": "SIN",
+      "etternavn": "REVURDERING",
+      "fødselsdato": "1932-02-12",
+      "kjønn": null
+    },
+    "vedtaksperiodeId": "1e58f870-5d30-43de-a64a-3368f0f83fb5",
+    "type": "FØRSTEGANGSBEHANDLING",
+    "oppgavetype": "REVURDERING",
+    "antallVarsler": 0,
+    "boenhet": {
+      "id": "0228",
+      "navn": "Nav Utland"
+    },
+    "tiltak": {
+      "id": "Ttype4",
+      "navn": "Arbeidsrettet rehabilitering"
+    },
+    "inntektskilde": "Arbeidsrettet rehabilitering"
+  },
+  {
+    "oppgavereferanse": "2327",
+    "opprettet": "2021-04-01T23:04:09.454",
+    "fødselsnummer": "11117615091",
+    "aktørId": "2287435975709",
+    "personinfo": {
+      "fornavn": "MUMMI",
+      "mellomnavn": null,
+      "etternavn": "TROLLET",
+      "fødselsdato": "1932-02-12",
+      "kjønn": "Mann"
+    },
+    "vedtaksperiodeId": "1e58f870-5d30-43de-a64a-3368f0f83fb5",
+    "type": "FØRSTEGANGSBEHANDLING",
+    "oppgavetype": "REVURDERING",
+    "antallVarsler": 0,
+    "boenhet": {
+      "id": "0228",
+      "navn": "Mummidalen"
+    },
+    "tiltak": {
+      "id": "Ttype5",
+      "navn": "Arbeidstrening"
+    },
+    "inntektskilde": "Arbeidstrening"
+  },
+  {
+    "oppgavereferanse": "2",
+    "opprettet": "2021-09-15T23:04:09.454",
+    "fødselsnummer": "21023701902",
+    "aktørId": "1000000009872",
+    "personinfo": {
+      "fornavn": "SNORK",
+      "mellomnavn": null,
+      "etternavn": "FRØKEN",
+      "fødselsdato": "1932-02-12",
+      "kjønn": "Kvinne"
+    },
+    "vedtaksperiodeId": "1e58f870-5d30-43de-a64a-3368f0f83fb5",
+    "type": "FØRSTEGANGSBEHANDLING",
+    "oppgavetype": "SØKNAD",
+    "antallVarsler": 0,
+    "boenhet": {
+      "id": "0228",
+      "navn": "Mummidalen"
+    },
+    "tiltak": {
+      "id": "Ttype6",
+      "navn": "Arbeidsforberedende trening"
+    },
+    "inntektskilde": "Arbeidsforberedende trening"
+  },
+  {
+    "oppgavereferanse": "3",
+    "opprettet": "2021-09-17T23:04:09.454",
+    "fødselsnummer": "05068821403",
+    "aktørId": "2446602102797",
+    "personinfo": {
+      "fornavn": "HUFSA",
+      "mellomnavn": null,
+      "etternavn": "SKUMLE",
+      "fødselsdato": "1932-02-12",
+      "kjønn": "Kvinne"
+    },
+    "vedtaksperiodeId": "1e58f870-5d30-43de-a64a-3368f0f83fb5",
+    "type": "FØRSTEGANGSBEHANDLING",
+    "oppgavetype": "SØKNAD",
+    "antallVarsler": 0,
+    "boenhet": {
+      "id": "0228",
+      "navn": "Nav Utland"
+    },
+    "tiltak": {
+      "id": "Ttype7",
+      "navn": "Midlertidig lønnstilskudd"
+    },
+    "inntektskilde": "Midlertidig lønnstilskudd"
+  },
+  {
+    "oppgavereferanse": "4",
+    "opprettet": "2021-10-14T23:04:09.454",
+    "fødselsnummer": "19026500128",
+    "aktørId": "2750243667998",
+    "personinfo": {
+      "fornavn": "STINKY",
+      "mellomnavn": null,
+      "etternavn": "STANK",
+      "fødselsdato": "1932-02-12",
+      "kjønn": "Mann"
+    },
+    "vedtaksperiodeId": "fde0f314-a2d0-486b-9419-f508ab26c7bc",
+    "type": "FØRSTEGANGSBEHANDLING",
+    "oppgavetype": "SØKNAD",
+    "antallVarsler": 0,
+    "boenhet": {
+      "id": "0228",
+      "navn": "Mummidalen"
+    },
+    "tiltak": {
+      "id": "Ttype8",
+      "navn": "Varig lønnstilskudd"
+    },
+    "inntektskilde": "Varig lønnstilskudd"
+  },
+  {
+    "oppgavereferanse": "klmsdflkm",
+    "opprettet": "2021-08-31T23:04:09.454",
+    "fødselsnummer": "11117615092",
+    "aktørId": "2287435975702",
+    "personinfo": {
+      "fornavn": "STOR",
+      "mellomnavn": null,
+      "etternavn": "BOLLE",
+      "fødselsdato": "1976-11-11",
+      "kjønn": "Kvinne"
+    },
+    "vedtaksperiodeId": "fde0f314-a2d0-486b-9419-f508ab26c7bc",
+    "type": "FØRSTEGANGSBEHANDLING",
+    "oppgavetype": "SØKNAD",
+    "antallVarsler": 0,
+    "boenhet": {
+      "id": "1938",
+      "navn": "Lyngen"
+    },
+    "tiltak": {
+      "id": "Ttype9",
+      "navn": "Kronisk syk arbeidstaker"
+    },
+    "inntektskilde": "Kronisk syk arbeidstaker"
+  },
+  {
+    "oppgavereferanse": "klmsdflkm2",
+    "opprettet": "2021-11-01T23:04:09.454",
+    "fødselsnummer": "12020052345",
+    "aktørId": "42",
+    "personinfo": {
+      "fornavn": "Isak",
+      "mellomnavn": null,
+      "etternavn": "Sellanrå",
+      "fødselsdato": "1990-02-16",
+      "kjønn": "Mann"
+    },
+    "vedtaksperiodeId": "87c0469c-16a5-4986-b756-7e4a7cdfcd71",
+    "type": "FØRSTEGANGSBEHANDLING",
+    "oppgavetype": "SØKNAD",
+    "antallVarsler": 0,
+    "boenhet": {
+      "id": "1938",
+      "navn": "Lyngen"
+    },
+    "tiltak": {
+      "id": "Ttype10",
+      "navn": "Tilrettelegging"
+    },
+    "inntektskilde": "Tilrettelegging"
+  },
+  {
+    "oppgavereferanse": "klmsdflkm3",
+    "opprettet": "2021-09-12T23:04:09.454",
+    "fødselsnummer": "13020052345",
+    "aktørId": "43",
+    "personinfo": {
+      "fornavn": "Snorkfrøken",
+      "mellomnavn": null,
+      "etternavn": "Mummi",
+      "fødselsdato": "1981-05-16",
+      "kjønn": "Kvinne"
+    },
+    "vedtaksperiodeId": "87c0469c-16a5-4986-b756-7e4a7cdfcd71",
+    "type": "FØRSTEGANGSBEHANDLING",
+    "oppgavetype": "SØKNAD",
+    "antallVarsler": 0,
+    "boenhet": {
+      "id": "0228",
+      "navn": "Mummidalen"
+    },
+    "tiltak": {
+      "id": "Ttype11",
+      "navn": "Varig tilrettelagt arbeid"
+    },
+    "inntektskilde": "Varig tilrettelagt arbeid"
+  },
+  {
+    "oppgavereferanse": "klmsdflkm4",
+    "opprettet": "2021-09-13T23:04:09.454",
+    "fødselsnummer": "13020152345",
+    "aktørId": "45",
+    "personinfo": {
+      "fornavn": "Snorken",
+      "mellomnavn": null,
+      "etternavn": "Mummi",
+      "fødselsdato": "1981-05-16",
+      "kjønn": "Mann"
+    },
+    "vedtaksperiodeId": "87c0469c-16a5-4986-b756-7e4a7cdfcd71",
+    "type": "FØRSTEGANGSBEHANDLING",
+    "oppgavetype": "SØKNAD",
+    "antallVarsler": 0,
+    "boenhet": {
+      "id": "0228",
+      "navn": "Mummidalen"
+    },
+    "tiltak": {
+      "id": "Ttype12",
+      "navn": "Jobbklubb"
+    },
+    "inntektskilde": "Varig tilrettelagt arbeid"
+  },
+  {
+    "oppgavereferanse": "1005",
+    "opprettet": "2021-09-05T08:38:00.728127",
+    "fødselsnummer": "21028701901",
+    "aktørId": "1051000009871",
+    "personinfo": {
+      "fornavn": "Emil",
+      "mellomnavn": null,
+      "etternavn": "Svensson",
+      "fødselsdato": null,
+      "kjønn": "Mann"
+    },
+    "vedtaksperiodeId": "aaaaaaaa-6541-4dcf-aa53-8b466fc4ac87",
+    "type": "FØRSTEGANGSBEHANDLING",
+    "antallVarsler": 2,
+    "boenhet": {
+      "id": "0220",
+      "navn": "Asker"
+    },
+    "tiltak": {
+      "id": "Ttype13",
+      "navn": "Tilskudd til ekspertbistand"
+    },
+    "inntektskilde": "Tilskudd til ekspertbistand"
+  },
+  {
+    "oppgavereferanse": "2006",
+    "opprettet": "2021-06-10T08:38:00.728127",
+    "fødselsnummer": "04079132100",
+    "aktørId": "87344321962123",
+    "personinfo": {
+      "fornavn": "Ida",
+      "mellomnavn": null,
+      "etternavn": "Svensson",
+      "fødselsdato": null,
+      "kjønn": "Kvinne"
+    },
+    "vedtaksperiodeId": "876f8c45-e9d1-4fd0-9c8c-9ee10f66b171",
+    "type": "FORLENGELSE",
+    "antallVarsler": 0,
+    "boenhet": {
+      "id": "0220",
+      "navn": "Asker"
+    },
+    "tiltak": {
+      "id": "Ttype14",
+      "navn": "Opplæring"
+    },
+    "inntektskilde": "Opplæring"
+  },
+  {
+    "oppgavereferanse": "2344",
+    "opprettet": "2021-05-10T08:38:00.728127",
+    "fødselsnummer": "04047832100",
+    "aktørId": "87654322262123",
+    "personinfo": {
+      "fornavn": "Alfred",
+      "mellomnavn": null,
+      "etternavn": "Karlsson",
+      "fødselsdato": null,
+      "kjønn": "Mann"
+    },
+    "vedtaksperiodeId": "876f8c45-e9d1-4fd0-9c8c-9ee10f66b171",
+    "type": "FORLENGELSE",
+    "antallVarsler": 0,
+    "boenhet": {
+      "id": "0220",
+      "navn": "Asker"
+    },
+    "tiltak": {
+      "id": "Ttype15",
+      "navn": "Avklaring"
+    },
+    "inntektskilde": "Kvalifiseringsprogrammet"
+  }
+]

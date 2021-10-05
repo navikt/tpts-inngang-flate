@@ -28,6 +28,7 @@ const venter: { [oppgavereferanse: string]: boolean } = {
     '2274': true,
 };
 
+// @ts-ignore
 const personer: { [aktørId: string]: string } = oppgaveFil
     .map(({ aktørId, oppgavereferanse }: { aktørId: string; oppgavereferanse: string }) => [aktørId, oppgavereferanse])
     .reduce((acc, [aktørId, oppgavereferanse]) => {
