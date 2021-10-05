@@ -37,7 +37,7 @@ describe('Header', () => {
         );
         userEvent.type(screen.getByRole('textbox'), 'test');
         userEvent.click(screen.getAllByRole('button')[0]);
-        expect(cachedVarsel).not.toBeNull();
+        expect(cachedVarsel).toBeNull();
     });
     test('legger ikke til varsel ved gyldig søk', async () => {
         render(
