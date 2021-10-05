@@ -1,12 +1,12 @@
 {
-    "name": "helse-speil",
+    "name": "tpts-inngang-flate",
     "version": "1.0.0",
     "main": "src/client/index.js",
-    "author": "Team Bømlo",
-    "description": "Innsyn i saksbehandling av sykepenger",
+    "author": "Team Bømlo/ team tpts",
+    "description": "Innsyn i søknader om tiltakspenger",
     "repository": {
         "type": "git",
-        "url": "https://github.com/navikt/helse-speil.git"
+        "url": "https://github.com/navikt/tpts-inngang-flate.git"
     },
     "license": "MIT",
     "scripts": {
@@ -25,7 +25,6 @@
         "prettier": "prettier --write \"src/**/*.{jsx,js,css,less,ts,tsx}\"",
         "e2e-test": "e2e-tests/run.sh",
         "e2e-test-local": "e2e-tests/run.sh; e2e-tests/stop.sh",
-        "spesialist-mock": "ts-node-dev spesialistMock/mockServer.ts",
         "prepare": "husky install"
     },
     "lint-staged": {
