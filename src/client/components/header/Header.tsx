@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Person } from 'internal-types';
+
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
@@ -8,12 +8,14 @@ import { InternalHeader, InternalHeaderTitle } from '@navikt/ds-react';
 
 import { authState } from '../../state/authentication';
 import { useToggleEasterEgg } from '../../state/easterEgg';
-import { useAddVarsel, useRemoveVarsel } from '../../state/varsler';
-
+import {  useRemoveVarsel } from '../../state/varsler';
+import { Brukermeny } from '../Brukermeny';
 import { BentoMeny } from '../BentoMeny';
 import { SearchBar } from './SearchBar';
+import {EasterEgg} from "../../EasterEgg";
 
 const Container = styled.div`
+    
     flex-shrink: 0;
     width: 100%;
     
@@ -44,10 +46,10 @@ const Container = styled.div`
 `;
 
 export const Header = () => {
-    const history = useHistory();
+
 
     const removeVarsel = useRemoveVarsel();
-    const addVarsel = useAddVarsel();
+
 
     const toggleEasterEgg = useToggleEasterEgg();
 
@@ -73,8 +75,9 @@ export const Header = () => {
                     <Link to="/">NAV Tiltakspenger</Link>
                 </InternalHeaderTitle>
                 <SearchBar onSearch={onSøk} />
-
+                <EasterEgg />
                 <BentoMeny />
+                <Brukermeny navn={brukerinfo.navn} ident={brukerinfo.ident} />
             </InternalHeader>
         </Container>
     );
