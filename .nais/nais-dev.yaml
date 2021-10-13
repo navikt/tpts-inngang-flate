@@ -8,12 +8,8 @@ metadata:
 spec:
   image: {{image}}
   port: 8080
-  {{#if ingresses}}
-    ingresses:
-      {{#each ingresses}}
-         - {{this}}
-        {{/each}}
-  {{/if}}
+  ingresses:
+    - https://tpts-inngang-flate.dev.intern.nav.no
   liveness:
     path: /
     initialDelay: 10
