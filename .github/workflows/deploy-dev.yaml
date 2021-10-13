@@ -58,6 +58,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo ${GITHUB_TOKEN} | docker login docker.pkg.github.com -u ${GITHUB_REPOSITORY} --password-stdin
+          echo ${GITHUB_TOKEN} | docker login ghcr.io -u ${{github.actor}} --password-stdin
           docker build --tag ${docker_image} -f .docker/dev/Dockerfile .
           docker push ${docker_image}
 
