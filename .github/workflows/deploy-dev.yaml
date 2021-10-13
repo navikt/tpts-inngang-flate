@@ -8,6 +8,7 @@ env:
   IMAGE_TAG: ${{ github.sha }}
   IMAGE: ghcr.io/navikt/tpts-inngang-flate
   IMAGE_LABEL: dev
+  docker_image: ghcr.io/navikt/tpts-inngang-flate:${{ github.sha }}
   REACT_APP_BACKEND_API_ROOT: https://tpts-inngang.dev.intern.nav.no
   CI: true
   TZ: Europe/Amsterdam
@@ -57,9 +58,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo ${GITHUB_TOKEN} | docker login docker.pkg.github.com -u ${GITHUB_REPOSITORY} --password-stdin
-          echo ${GITHUB_TOKEN} | docker login ghcr.io -u ${{github.actor}} --password-stdin
-          docker build -t ${IMAGE}-${IMAGE_LABEL}:${IMAGE_TAG} -f .docker/dev/Dockerfile .
-          docker push ${IMAGE}-${IMAGE_LABEL}:${IMAGE_TAG}
+          docker build --tag ${docker_image} .
+          docker push ${docker_image}
 
   deploy-dev:
     name: Deploy application to dev
@@ -75,5 +75,5 @@ jobs:
           CLUSTER: dev-gcp
           RESOURCE: .nais/nais-dev.yaml
           VARS: .nais/dev-gcp.yaml
-          VAR: image_tag=${{env.IMAGE_TAG}},image_label=${{env.IMAGE_LABEL}}
+          VAR: image=${{ env.docker_image }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
