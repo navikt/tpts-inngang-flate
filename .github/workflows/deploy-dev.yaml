@@ -8,7 +8,6 @@ env:
   IMAGE_TAG: ${{ github.sha }}
   IMAGE: ghcr.io/navikt/tpts-inngang-flate
   IMAGE_LABEL: dev
-  RESOURCE: .nais/nais-dev.yaml
   REACT_APP_BACKEND_API_ROOT: https://tpts-inngang.dev.intern.nav.no
   CI: true
   TZ: Europe/Amsterdam
@@ -74,6 +73,7 @@ jobs:
         env:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: dev-gcp
+          RESOURCE: .nais/nais-dev.yaml
           VARS: .nais/dev-gcp.yaml
           VAR: image_tag=${{env.IMAGE_TAG}},image_label=${{env.IMAGE_LABEL}}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
