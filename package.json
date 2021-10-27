@@ -57,7 +57,7 @@
         "@navikt/helse-frontend-tooltip": "^2.0.1",
         "@navikt/helse-frontend-varsel": "^3.0.1",
         "@react-three/drei": "^6.2.0",
-        "@react-three/fiber": "^7.0.1",
+        "@react-three/fiber": "^7.0.10",
         "@types/react-collapse": "^5.0.0",
         "@types/react-router": "^5.1.13",
         "amplitude": "^5.1.5",
