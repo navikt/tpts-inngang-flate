@@ -1,6 +1,8 @@
 /deploy
 /.github
-/workflows/deploy_dev.yml
+/workflows/deploy_commit_to_dev.yml
+/workflows/pull-requests.yml
+/dist
 .DS_STORE
 node_modules
 *.pyc
