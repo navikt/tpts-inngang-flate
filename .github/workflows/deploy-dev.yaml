@@ -23,8 +23,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: ${{env.NODE_VERSION}}
-      - run: npm ci
-      - run: npm run build
+      - name: Clean slate
+        run: npm ci
+      - name: Build client
+        run: npm run build
+      - name: Build server
+        run: npm run build-server
 
   build-docker-image:
     runs-on: ubuntu-latest
@@ -35,12 +39,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{env.NODE_VERSION}}
-      - name: Install production artifact
-        run: npm ci
-      - name: Build client
-        run: npm run build
-      - name: Build server
-        run: npm run build-server
       - name: Build and publish Docker image
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
