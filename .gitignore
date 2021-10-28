@@ -36,3 +36,4 @@ yarn-error.log*
 /e2e-tests/cypress/videos/*
 /pages
 .jest-cache
+/dist/
