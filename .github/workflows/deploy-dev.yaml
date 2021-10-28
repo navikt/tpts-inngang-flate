@@ -37,8 +37,10 @@ jobs:
           node-version: ${{env.NODE_VERSION}}
       - name: Install production artifact
         run: npm ci
-      - name: Build production artifact
+      - name: Build client
         run: npm run build
+      - name: Build server
+        run: npm run build-server
       - name: Build and publish Docker image
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
