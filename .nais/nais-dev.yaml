@@ -7,6 +7,8 @@ metadata:
     team: tpts
   annotations:
     nais.io/read-only-file-system: "false"
+    nais.io/run-as-user: "0"
+    nais.io/run-as-group: "0"
 spec:
   image: {{image}}
   port: 8080
