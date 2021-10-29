@@ -1,5 +1,3 @@
-FROM nginx:stable-alpine
-
 FROM navikt/node-express:12.2.0-alpine
 
 ARG NODE_ENV=production
