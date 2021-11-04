@@ -2,7 +2,7 @@ apiVersion: "nais.io/v1alpha1"
 kind: "Application"
 metadata:
   name: tpts-inngang-flate
-  namespace: tpts
+  namespace: {{namespace}}
   labels:
     team: tpts
   annotations:
@@ -11,7 +11,9 @@ spec:
   image: {{image}}
   port: 8080
   ingresses:
-    - https://tpts-inngang-flate.dev.intern.nav.no
+    {{#each ingresses}}
+        - {{this}}
+      {{/each}}
   replicas:
     min: 1
     max: 1
