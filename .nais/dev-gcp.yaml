@@ -1,3 +1,0 @@
-namespace: tpts
-ingresses:
-  - https://tpts-inngang-flate.dev.intern.nav.no
